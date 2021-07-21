@@ -1,7 +1,11 @@
+//ACÁ LLAMO O USO A EXPRESS
 const express= require('express');
+//PATH SIRVE PARA LOCALIZAR RUTAS DE ARCHIVOS DENTRO DEL PROYECTO
 const path= require('path');
+//HANDLEBARS ES EL MOTOR DE PLANTILLAS
 const exphbs=require('express-handlebars');
 const methodOverride=require('method-override');
+
 const app=express();
 
 
@@ -26,6 +30,7 @@ app.use(express.static(path.join(__dirname,'public')));
 
 //routes 
 app.use(require('./routes/index'));
+
 
 
 
