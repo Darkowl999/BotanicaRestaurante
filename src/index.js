@@ -30,7 +30,9 @@ app.use(express.static(path.join(__dirname,'public')));
 
 //routes 
 app.use(require('./routes/index'));
-
+app.use(require('./routes/home'));
+app.use(require('./routes/registro'));
+app.use(require('./routes/turnos'));
 
 
 
