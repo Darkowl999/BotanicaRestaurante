@@ -7,5 +7,3 @@ router.get('/registro',(req,res)=>{
 });
 
 module.exports=router;
-
-//raul perro
