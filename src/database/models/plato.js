@@ -6,16 +6,30 @@ const sequelize = require('../db');
 class Plato extends Model{}
 
 Plato.init({
-    //id_plato:DataTypes.INTEGER,
-    nombre:DataTypes.STRING,
-    descripcion:DataTypes.TEXT,
-    precio:DataTypes.FLOAT,
-    estado:DataTypes.STRING,
-    cantidad:DataTypes.INTEGER
+    nombre: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    descripcion: {
+        type: DataTypes.TEXT,
+        allowNull: false
+    },
+    precio: {
+        type: DataTypes.FLOAT,
+        allowNull: false
+    },
+    estado: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        len: [1, 20]
+    },
+    cantidad: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    }
 },{
     sequelize,
     modelName:"plato"
-
 });
 module.exports=Plato;
 

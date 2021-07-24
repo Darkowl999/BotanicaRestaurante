@@ -7,6 +7,7 @@ const exphbs=require('express-handlebars');
 const methodOverride=require('method-override');
 //const { Sequelize } = require('sequelize/types');
 const sequelize=require('./database/db');
+require('./database/relaciones');
 
 const app=express();
 
