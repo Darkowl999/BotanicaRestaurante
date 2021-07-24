@@ -37,9 +37,15 @@ app.use(express.urlencoded({extended:false}));
 //routes 
 app.use(require('./routes/index'));
 app.use(require('./routes/home'));
+app.use(require('./routes//login'));
 app.use(require('./routes/registro'));
 app.use(require('./routes/turnos'));
 app.use(require('./routes/plato'));
+app.use(require('./routes/areas'));
+app.use(require('./routes/mesas'));
+app.use(require('./routes/roles'));
+app.use(require('./routes/gestionar_usuarios'));
+app.use(require('./routes/gestionar_clientes'));
 
 
 
