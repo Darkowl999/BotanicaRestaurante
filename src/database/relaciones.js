@@ -18,7 +18,7 @@ Cargo.hasMany(Empleado);
 Empleado.belongsToMany(Turno, { through: 'empleado_turno' });
 Area.hasMany(Mesa);
 Cliente.hasMany(Reserva);
-Reserva.belongsToMany(Mesa, { through: 'reservar' });
+Reserva.belongsToMany(Mesa, { through: 'reservar'});
 Pedido.belongsToMany(Plato, { through: 'pedido_plato' });
 Cliente.hasMany(Recibo);
 Pedido.hasOne(Recibo);

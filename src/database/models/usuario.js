@@ -2,6 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../db');
 
 class Usuario extends Model {};
+
 Usuario.init({
     nombre_usuario: {
         type: DataTypes.STRING,
