@@ -19,16 +19,15 @@ Cargo.hasMany(Empleado);
 Empleado.belongsToMany(Turno, { through: 'empleado_turno' });
 Area.hasMany(Mesa);
 Cliente.hasMany(Reserva);
-<<<<<<< HEAD
+
 Reserva.belongsToMany(Mesa, { through: 'reservar'});
 Pedido.belongsToMany(Plato, { through: 'pedido_plato' });
 Cliente.hasMany(Recibo);
 Pedido.hasOne(Recibo);
 Mesa.hasMany(Recibo);
-=======
 Reserva.belongsToMany(Mesa, { through: 'reservar' });
 Cliente.hasMany(Recibo);
 Pedido.hasOne(Recibo);
 Mesa.hasMany(Recibo);
 Pedido.belongsToMany(Plato, { through: Pedido_Plato });
->>>>>>> 31fab7f2b59a7c886745e62b5e2df0cb119db083
+
