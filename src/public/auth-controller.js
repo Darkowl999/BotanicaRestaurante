@@ -1,4 +1,4 @@
-function Auth(){
+/*function Auth(){
     return {
         ci: 'h',
         name: '',
@@ -28,23 +28,20 @@ function Auth(){
             }
         },
         login(){
-            /*const secret = keytar.getPassword(keytarService, keytarAccount);
-            console.log(keytarAccount)
-            secret.then((result) => {
-                console.log("result: "+ result); // result will be 'secret'
-            });*/
             if(this.errors.email === '' && this.errors.password === '')
             axios.post('http://localhost:3000/api/singin', {
                 email: this.email,
                 password: this.password
-            })
-                .then(function (response) {
+            }).then(function (response) {
                     console.log(response.data);
-                 /*   keytar.setPassword(keytarService, keytarAccount, response.data.token).then();
+                    /!*
+                    poner token en cookies
+                     *!/
+                 /!*keytar.setPassword(keytarService, keytarAccount, response.data.token).then();
                     const secret = keytar.getPassword(keytarService, keytarAccount);
                     secret.then((result) => {
                         console.log("result: "+ result); // result will be 'secret'
-                    });*/
+                    });*!/
                 })
                 .catch(error=> {
                     this.errors.response=error.response.data.errors[0].msg;
@@ -52,5 +49,24 @@ function Auth(){
                 });
         }
     }
-}
+}*/
 
+function t(){
+    return {
+        email:'',
+        password:'',
+        login(){
+            console.log(this.email);
+            console.log(this.password);
+            if(this.errors.email === '' && this.errors.password === '')
+                axios.post('http://localhost:3000/api/login', {
+                    email: this.email,
+                    password: this.password
+                }).then(function (response) {
+                   /*guardar token en cookies*/
+                }).catch(error=> {
+                    console.log(error.message);
+                    });
+        }
+    }
+}
