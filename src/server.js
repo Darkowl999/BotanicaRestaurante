@@ -36,10 +36,15 @@ app.use(require('./routes/home.routes'));
 app.use(require('./routes/registro.routes'));
 app.use(require('./routes/turnos.routes'));
 app.use(require('./routes/plato.routes'));
+app.use(require('./routes/areas.routes'));
+app.use(require('./routes/gestionar_clientes.routes'));
+app.use(require('./routes/gestionar_usuarios.routes'));
+app.use(require('./routes/roles.routes'));
+app.use(require('./routes/mesas.routes'));
+//app.use(require('./routes/login.routes'));
 
 
 
-//asasasasasas
 
 
 module.exports=app;

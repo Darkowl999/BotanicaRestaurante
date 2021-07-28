@@ -16,6 +16,7 @@ router.post('/area', (req, res) => {
 router.get('/area/:id', (req, res) => {
     Area.findByPk(req.params.id).then(area => {
          res.json(area);
+         console.log(req.params.id);
     })
 });
 

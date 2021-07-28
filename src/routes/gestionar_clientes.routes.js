@@ -1,5 +1,4 @@
 const express = require('express');
-const { route } = require('.');
 const Cliente = require('../database/models/cliente');
 const router = express.Router();
 
@@ -17,8 +16,9 @@ router.post('/cliente', (req, res) => {
 
 //READ
 router.get('/cliente/:id', (req, res) => {
-    Cliente.findByPk(req.params.id).then(cliente => {
+    Cliente.findByPk(req.params.id).then(cliente => {   //ASI SE OBTIENE UN CLIENTE A TRAVES DE SU ID
          res.json(cliente);
+         console.log(req.params.id);
     })
 });
 
