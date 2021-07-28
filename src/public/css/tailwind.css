@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    input {
+        @apply border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-transparent;
+    }
+    select {
+        @apply border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-transparent;
+    }
+
+    button {
+        @apply items-center py-2 px-4 bg-gray-800 hover:bg-gray-700 focus:bg-gray-900 focus:ring-1 focus:ring-gray-700 focus:outline-none rounded font-medium text-xs text-white uppercase
+    }
+    label{
+        @apply text-gray-500 text-sm
+    }
+}
+
+@layer components {
+    @variants responsive {
+        .danger{
+            @apply bg-red-600 hover:bg-red-500 focus:bg-red-700 focus:ring-1 focus:ring-red-500
+        }
+        .error{
+            @apply text-red-500 text-sm italic my-1
+        }
+    }
+}
