@@ -51,6 +51,31 @@
     }
 }*/
 
+function users() {
+  return {
+      person: {
+          name: null,
+          email: null,
+          address: null,
+          city: null
+      },
+      init(){
+          /*get*/
+          fetch('https://jsonplaceholder.typicode.com/users/1')
+              .then(response=> {
+                  return response.json()
+              }).then(data => this.person = {
+              name: data.name,
+              email: data.email,
+              address: data.address.street,
+              city: data.address.city
+          })
+      }
+  }
+}
+
+
+
 function t(){
     return {
         email:'',
@@ -59,7 +84,7 @@ function t(){
             console.log(this.email);
             console.log(this.password);
             if(this.errors.email === '' && this.errors.password === '')
-                axios.post('http://localhost:3000/api/login', {
+                axios.post('http://localhost:3000/usuarios', {
                     email: this.email,
                     password: this.password
                 }).then(function (response) {
